@@ -5,6 +5,7 @@ const app = express()
 
 const genres = require('./routes/genres')
 
+app.use(genres)
 app.use(express.json())
 app.use(morgan('tiny'))
 app.use('/api/genres', genres)
